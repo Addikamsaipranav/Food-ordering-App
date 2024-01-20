@@ -1,0 +1,200 @@
+//npm init
+//npm install -D parcel
+    // -D Dev dependency
+    // its done only in development not in production
+//parcel will give muscles to our app its a bundler
+
+
+
+// in package.json 
+// ^caract and  ~tilde
+// if  new version comes , a minor version parcel will automatically updates
+// if we keeo tilde it will update major version of it
+
+
+/*package-lock.json
+diff between package.json and package-lock.json
+package.json :
+              its configuration file for npm , keep  track of whats version od package is installed in system
+packge-lock.json:
+            it keep tracks of exact version of it package/dependency 
+              search for parcel 
+                  package.json has 
+                  parcel:2.8.3
+            in package-lock.json:
+                      it has all the information of 2.8.3
+                      integrity values-hash values 
+                      it tracks all the exact versions of all the packages .
+
+node-modules:
+              install all code of parcel
+                  -parcel has some depenecies
+                  -it will install all depenecies in the node-modules
+                  -recursivley install all depenecies of all dependencies
+                  - node module is like a code of all packages we use 
+                  -local setup of all dependencies/packages
+                  -this is known as transitive dependency 
+                  parcel needs help of another packages
+                  this means parcel is been transitively dependent on other packages
+                  we are transitively dependent on parcel
+                  
+
+
+
+*/
+
+
+
+
+
+
+
+
+GENERAL REACT setup
+  ----do npm init
+  ----install parcel  npm i -D parcel
+  ----insrall react ,  react-dome 
+
+  create index.html
+  add app.js in it
+  create a root node
+
+  in app.js
+  import react,react-dome
+
+  create react nodes in it
+  add code
+
+  create root element which indicates root node in index.html
+  root.render(elememt)
+
+
+  start the app
+      npx parcel index.html
+      npx parcel build index.html
+
+    add scripts:
+       "start":"npx parcel index.html"
+            -npm run start
+        "build":"npx parcel build index.html"
+            -npm run  build
+
+
+
+
+
+=====TO CREATE REACT elememt AT FIRST TIME=======
+
+
+
+import React from "react"
+import ReactDOM  from "react-dom"
+
+const parent=React.createElement("div",{id:"parent"},[
+    React.createElement("div",{id:"child"},[
+        React.createElement("h1",{},"I am h1 tag "),
+        React.createElement("h2",{},"I am h2 tag")
+    ]),
+    React.createElement("div",{id:"child"},[
+        React.createElement("h1",{},"I am h1 tag"),
+        React.createElement("h2",{},"I am h2 tag")
+    ])
+])
+
+
+ console.log(parent)
+
+
+
+
+
+dom elememts === react elements
+react element is not html 
+react element is obj, when we render it will become html element
+react element
+const heading=React.createElement("h1",{id:"heading"},"NAMSTE REACT")
+
+const root=ReactDOM.createRoot(document.getElementById("root"));
+root.render(heading)
+
+
+
+
+
+This is not good practice to work on react, so they created JSX to create react elememt
+
+jsx is not part of react 
+
+we can create website without jsx , 
+jsx help us to create react elememnts easily
+
+
+
+
+
+const jsxheading=<h1>NAMASTE REACT</h1>
+
+
+jsx is html/xml like syntax
+
+jsx obj and react element is same 
+
+
+javascript engine doesnt understand jsx 
+js engine understand ecmascipt6
+
+how code is working?
+   parcel is doing job behind the scenes
+   code is been transpilled before reaching js engine
+   jsengine understand the transpilled code of it 
+   parcel is like a manager of this transpiller 
+   its babel job to transpille
+   babel is been installed by parcel 
+   bable is js compiler or transpiller
+
+
+
+react element 
+           js object
+                   while rendering it becomes html elememnts
+
+
+jsx
+   jsx code is been converted to react elememnts using babel.
+      react elememnts 
+                js object
+                     renders as html elements
+
+
+
+
+
+use camel case for jsx elememnts attributes
+
+
+wrap jsx in () if u have mutliple lines
+
+
+
+
+
+
+
+
+
+====REACT COMPONENT====
+ Every thing is component in react 
+ eg:
+    they are two types :
+            class based components
+            function based components
+    class based components:
+           old way of writing code
+    function based components:
+           newest way of writing components
+           99% developers using it
+           components are been using react function to create react components
+
+
+
+REACT FUNCTION COMPONENT - its juz a javascript function , name it with capia

@@ -1,0 +1,116 @@
+
+/* HEADER-CSS */
+.header{
+    justify-content: space-between  ;
+    border: 1px solid black;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    display: flex;
+    border-radius: 5px;
+    padding-left:20px;
+    padding-right: 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    top: 0;
+}
+.logo{
+    width: 100px;
+    margin-left: 50px;
+
+}
+.nav-items{
+    margin-right: 70px;
+}
+.nav-items >ul{
+    display: flex;
+    list-style-type: none;
+    padding: 0px 20px;
+}
+.nav-items >ul >li{
+    padding: 10px;
+    margin: 10px;
+}
+
+
+/*BODY CSS*/
+.body{
+    border: 1px solid black;
+    padding-top: 110px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.res-conatiner{
+    /* display flex makes side by side and wrap will wrap up at each row .*/
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 30px;
+
+}
+.res-card{
+
+    margin: 25px;
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #f0f0f0;
+    border-radius: 18px;
+    transition: width 0.6s ease, padding 0.3s ease, border-radius 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: border 1s ease ;
+}
+
+/* 
+.res-card:hover{
+    cursor: pointer;
+    width: 305px;
+    height: 370px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+   
+} */
+
+
+.res-logo{
+    width: 100% ;
+    height: 170px;
+    border-radius: 15px;
+    transition: width 0.5s ease, padding 0.5s ease, border-radius 0.5s ease;
+}
+.res-card:hover{
+  
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+.res-card:hover .res-logo{
+    width: 97%;
+    padding: 3px;
+    border-radius: 25px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.res-card {
+    overflow: hidden;
+}
+
+
+
+
+
+/*FILTERS CSS*/
+
+.filters{
+    padding: 10px;
+    width: 101%;
+    height: 40px;
+    border-radius: 10px;
+    margin-left: 50px;
+}
+.filters button{
+     margin-left:10px;
+     border-radius: 7px;
+     height: 35px;
+     background-color:darkslategrey;
+     color: white;
+     box-shadow: 0 0 20px rgba(1, 1, 1, 0.1);
+     
+
+}
